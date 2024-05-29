@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" href="normalize.css" />
+</head>
+<body>
+   
+        <h1>ToDo List</h1>
+        <div class="task-input">
+        <input type="text"  id="task" placeholder="Введите задачу"  > 
+        <button id="addTask">Добавить</button>
+        </div>
+    <ul id="taskList">
+
+    </ul>
+
+    <script>
+         const taskInput = document.getElementById("task");
+         const addTaskButton = document.getElementById("addTask");
+         const taskList = document.getElementById("taskList");
+
+         function createTask() {
+            const taskItem = document.createElement("li");
+            const taskInputValue = taskInput.value;
+            taskItem.textContent = taskInputValue;
+            taskList.appendChild(taskItem);
+            taskInput.value ="";
+         }
+
+         function checkTask(event) {
+            if (event.target.tagName === 'LI') {
+		 event.target.classList.toggle('completed');
+	       }
+         }
+
+         addTaskButton.addEventListener('click', createTask);
+         taskList.addEventListener('click', checkTask);
+    </script>
+</body>
+</html>

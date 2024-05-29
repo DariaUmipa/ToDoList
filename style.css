@@ -1,0 +1,47 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+h1{
+    color: rgb(137, 89, 196);
+}
+
+.task-input{
+    margin: 20px 0;
+}
+
+input{
+    width: 60%;
+    padding: 8px;
+    background-color: rgb(196, 222, 236);
+    border-color: rgb(75, 75, 179);
+    border-radius: 30px;
+    
+}
+
+button{
+    padding: 8px 20px;
+    background-color: rgb(123, 123, 218);
+    color: antiquewhite;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+li{
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+
+
+.completed{
+    text-decoration: line-through;
+}
+
+
